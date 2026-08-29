@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Pix Draw</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav id="navbar">
+      <div id="name">PIX DRAW</div>
+    </nav>
+    <div id="container">
+      <div class="panel" id="leftPanle">
+        <p class="things">Tools</p>
+        <div id="tools">
+          <button class="toolBtn" id="toolPencil" onclick="setTool('pencil')">
+            <img src="icons/pencil.svg" />
+          </button>
+          <button class="toolBtn" id="toolEraser" onclick="setTool('eraser')">
+            <img src="icons/eraser.svg" />
+          </button>
+          <button class="toolBtn" id="toolFill" onclick="setTool('fill')">
+            <img src="icons/paint-bucket.svg" alt="" />
+          </button>
+          <button class="toolBtn" id="toolPick" onclick="setTool('pick')">
+            <img src="icons/pipette.svg" alt="" />
+          </button>
+        </div>
+        <p class="things">Palette</p>
+        <div id="paletteGrid"></div>
+        <div id="extraColorRow">
+          <input type="color" id="customColor" />
+          <span id="hexText">#000000</span>
+        </div>
+      </div>
+      <div id="centerArea">
+        <div id="grid"></div>
+        <div id="size">grid 16x16 - pencil - #000000</div>
+      </div>
+      <div class="panel" id="rightPanel">
+        <p class="things">Canvas</p>
+        <p class="things">Grid size</p>
+        <select id="sizeSelect">
+          <option value="8">8 x 8</option>
+          <option value="16">16 x 16</option>
+          <option value="32">32 x 32</option>
+          <option value="64">64 x 64</option>
+        </select>
+
+        <p class="things">Canvas scale</p>
+        <select id="scaleSelect">
+          <option value="14">Small</option>
+          <option value="20">Medium</option>
+          <option value="28">Large</option>
+        </select>
+        <div class="gridCheckbox">
+          <input type="checkbox" id="gridCheck" checked />
+          <label for="gridCheck">Show grid lines</label>
+        </div>
+        <p class="things">History</p>
+        <div id="history">
+          <button><img src="icons/undo.svg" alt="" />Undo</button>
+          <button><img src="icons/redo.svg" alt="" />Redo</button>
+        </div>
+        <p class="things">Export</p>
+        <button id="dwnBTN">
+          <img src="icons/image-down.svg" alt="" />Download PNG
+        </button>
+        <button id="clearBTN">
+          <img src="icons/broom.svg" alt="" />Clear canvas
+        </button>
+      </div>
+    </div>
+    <footer>Made for HackClub</footer>
+    <canvas id="canvas"></canvas>
+    <script src="script.js"></script>
+  </body>
+</html>
