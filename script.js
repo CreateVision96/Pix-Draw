@@ -313,6 +313,18 @@ const downloadPNG = () => {
 
 dwnBTN.addEventListener("click", downloadPNG);
 
+const updateStatusBar = () => {
+  size.textContent =
+    "grid " +
+    gridSize +
+    "x" +
+    gridSize +
+    " - " +
+    currentTool +
+    " - " +
+    currentColor;
+};
+
 gridData = makeEmptyGrid(gridSize);
 
 buildPalette();
